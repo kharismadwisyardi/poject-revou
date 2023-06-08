@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Company Profile</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>    
+    <body>
+        <header class="header-wrapper">
+            <img class="logo" alt="revou-logo" src="assets/Revou-alasan.original.png">
+            <div class="menu">
+                <button class="nav-item">Home</button>
+                <button class="nav-item">My Profile</button>
+                <button class="nav-item">Portofolio</button>
+                <button class="nav-item">Message Us</button>
+            </div>
+        </header>
+
+        
+
+        <main class="main-content">
+            <h3>Hi <span id="nama"></span>, Welcome To Website</h3>
+
+            <!-- <script>
+                var name = prompt("Masukan nama kamu");
+                document.getElementById("nama").innerText = name;
+            </script> -->            
+
+            <div class="slide-gambar">
+                <img
+                    class="img-slideshow"
+                    src="assets/111.jpg"
+                />
+                <img
+                    class="img-slideshow"
+                    src="assets/222.jpg"
+                />
+                <img
+                    class="img-slideshow"
+                    src="assets/333.jpg"
+                />
+                <br>
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>    
+            </div>
+            <br><br><br>
+
+            <script src="js/script.js"></script>
+
+            <div id="headquarters-section">
+                <h1>Headquarters</h1>
+                <br><br><br><br><br><br><br>
+                <div class="wrapper">
+                    <div class="headquarters-image-container">
+                        <div class="headquarters-image">
+                            <img src="assets/3763774.jpg" width="400px"/>
+                        </div>
+                        <h2 class="title">Jakarta</h2>
+                        <!--<p>Jakarta</p>-->
+                    
+                    </div>
+                    <div class="headquarters-image-container">
+                        <div class="headquarters-image">
+                            <img src="assets/R.jpeg" width="400px"/>
+                        </div>
+                        <h2 class="title">Bandung</h2>
+                        <!--<p>Bandung</p>-->
+                    
+                    </div>
+                    <div class="headquarters-image-container">
+                        <div class="headquarters-image">
+                            <img src="assets/surabaya kgja0kWxIP.jpg" width="400px"/>
+                        </div>
+                        <h2 class="title">Surabaya</h2>
+                        <!--<p>Surabaya</p>-->
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+
+            <div class="form-section">
+                <form name="message-form" onsubmit="return validateForm()">
+                    <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td> 
+                                <input placeholder="Nama" type="text" name="full-name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tanggal Lahir</td>
+                            <td>:</td>
+                            <td>
+                                <input type="date" name="birth-date" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" id="male" name="gender" value="laki-laki" />
+                                <label for="male">Laki-laki</label>
+                                <input type="radio" id="female" name="gender" value="perempuan" />
+                                <label for="female">Perempuan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pesan</td>
+                            <td>:</td>
+                            <td>
+                                <textarea placeholder="Pesan" name="messages"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <input class="submit" type="submit" value="Submit" />
+                </form>
+
+                <div class="form-output">
+                    <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td><span id="sender-full-name"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Tangal Lahir</td>
+                            <td>:</td>
+                            <td><span id="sender-birth-date"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td><span id="sender-gender"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Pesan</td>
+                            <td>:</td>
+                            <td><span id="sender-messages"></span></td>
+                        </tr>
+                    </table>    
+                </div>
+
+                <!-- <div class="form-output">
+                    <p>Nama: <span id="sender-full-name"></span></p>
+                    <p>Tangal Lahir: <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                    <p>Pesan: <span id="sender-messages"></span></p>
+                </div> -->
+            </div>
+        </main>
+    </body>
+    <br><br><br>
+    <footer class="footer-wrapper">
+        Created by Revou
+    </footer>
+</html>
